@@ -1,0 +1,7 @@
+*.txt
+!requirements.txt
+Documentation/
+.*
+tests/
+players_script.py
+Dockerfile
