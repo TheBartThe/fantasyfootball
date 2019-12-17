@@ -9,12 +9,6 @@ COPY requirements.txt .
 
 RUN pip install -r requirements.txt
 
-ENV FF_DB=fantasyfootball_db \
-	FF_USER=root \
-	FF_PASSWORD=root \
-	FF_HOST=35.246.52.184 \
-	FF_SECRET_KEY=fnb9t4tfhgiothu490tu345yh430953ty09y4ih
-
 # copy the correct python script to the current working directory
 COPY . ff-app
 
