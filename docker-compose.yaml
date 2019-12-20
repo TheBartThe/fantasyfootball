@@ -19,8 +19,8 @@ services:
     build: .
     environment:
     - FF_DB=${FF_DB}
-      FF_USER=${FF_USER}
-      FF_PASSWORD=${FF_PASSWORD}
-      FF_HOST=${FF_HOST}
-      FF_SECRET_KEY=${FF_SECRET_KEY}
+    - FF_USER=${FF_USER}
+    - FF_PASSWORD=${FF_PASSWORD}
+    - FF_HOST=${FF_HOST}
+    - FF_SECRET_KEY=${FF_SECRET_KEY}
 ...
