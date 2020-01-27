@@ -16,6 +16,7 @@ services:
     - application
   application:
     container_name: app
+    image: thebartthe/ff-app:5000
     build: .
     environment:
     - FF_DB=${FF_DB}
