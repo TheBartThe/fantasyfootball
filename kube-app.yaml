@@ -43,7 +43,7 @@ spec:
               secretKeyRef:
                 name: mysecret
                 key: secretKey
-     ports:
+        ports:
         - containerPort: 5000
         readinessProbe:
           httpGet:
