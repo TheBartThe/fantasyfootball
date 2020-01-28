@@ -19,16 +19,31 @@ spec:
         image: thebartthe/ff-app:5000
         env:
           - name: FF_USER
-            value: ${FF_USER}
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: user
           - name: FF_PASSWORD
-            value: ${FF_PASSWORD}
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: password
           - name: FF_DB
-            value: ${FF_DB}
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: db
           - name: FF_HOST
-            value: ${FF_HOST}
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: host
           - name: FF_SECRET_KEY
-            value: ${FF_SECRET_KEY}
-        ports:
+            valueFrom:
+              secretKeyRef:
+                name: mysecret
+                key: secretKey
+     ports:
         - containerPort: 5000
         readinessProbe:
           httpGet:
